@@ -144,7 +144,11 @@ section{padding:96px 0}
 .gallery img.wide{grid-column:span 2;aspect-ratio:2/1}
 @media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}}
 .ba{margin-top:40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;background:var(--ink-2);border:1px solid var(--line);border-radius:22px;padding:28px}
-.ba img{border-radius:14px;width:100%}
+.ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ba-pair figure{position:relative;margin:0}
+.ba-pair img{border-radius:14px;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 60%}
+.ba-pair figcaption{position:absolute;left:10px;bottom:10px;font:800 13px/1 Archivo,sans-serif;letter-spacing:.08em;text-transform:uppercase;background:rgba(10,13,18,.85);color:#fff;padding:8px 11px;border-radius:8px}
+.ba-pair figcaption.after{background:var(--blue)}
 .ba h3{font-size:26px;margin-bottom:10px}
 .ba p{color:var(--muted)}
 @media (max-width:760px){.ba{grid-template-columns:1fr}}
@@ -308,8 +312,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
       <img src="img/g12.jpg" alt="Grey JoJo tank with booster and filters" loading="lazy">
     </div>
     <div class="ba">
-      <img src="img/beforeafter.jpg" alt="Before and after of a filtration system upgrade" loading="lazy">
-      <div><span class="eyebrow">Before &amp; after</span><h3>We tidy up old systems too.</h3><p>Messy pipework, tired filters and exposed wiring replaced with a clean, serviceable setup that doesn't spoil the look of your home.</p></div>
+      <div class="ba-pair">
+        <figure><img src="img/ba_before.jpg" alt="Before: softener with loose wiring and no filtration" loading="lazy"><figcaption>Before</figcaption></figure>
+        <figure><img src="img/ba_after.jpg" alt="After: same softener with triple filtration, UV and tidy wiring" loading="lazy"><figcaption class="after">After</figcaption></figure>
+      </div>
+      <div><span class="eyebrow">Before &amp; after</span><h3>We tidy up old systems too.</h3><p>Same softener, before and after. We added triple-stage filtration and a UV steriliser, and tidied the loose wiring into a clean, serviceable setup that doesn't spoil the look of your home.</p></div>
     </div>
   </div>
 </section>
